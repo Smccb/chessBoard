@@ -1,0 +1,16 @@
+functions needed/scripts needed:
+------------------------------------
+Main chess functions run from this file: ChessController
+
+ChessController{
+	void Start() {
+        
+	//call function to create starting board layout
+	StartGame();
+
+    	}
+	
+	StartGame(){
+		
+	}
+}
