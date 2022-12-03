@@ -16,96 +16,128 @@ MonoBehaviour:
   - position: {x: 0, y: 0}
     pieceType: 4
     temaColour: 1
-  - position: {x: 2, y: 1}
+    teamColour: 0
+  - position: {x: 1, y: 1}
+    pieceType: 1
+    temaColour: 1
+    teamColour: 0
+  - position: {x: 2, y: 0}
     pieceType: 5
     temaColour: 1
+    teamColour: 0
+  - position: {x: 3, y: 0}
+    pieceType: 3
+    temaColour: 1
+    teamColour: 0
+  - position: {x: 4, y: 0}
+    pieceType: 2
+    temaColour: 1
+    teamColour: 0
+  - position: {x: 5, y: 0}
+    pieceType: 5
+    temaColour: 1
+    teamColour: 0
+  - position: {x: 6, y: 0}
+    pieceType: 1
+    temaColour: 1
+    teamColour: 0
   - position: {x: 0, y: 0}
+    pieceType: 4
+    temaColour: 1
+    teamColour: 0
+  - position: {x: 0, y: 1}
     pieceType: 0
     temaColour: 1
-  - position: {x: 0, y: 0}
+    teamColour: 0
+  - position: {x: 1, y: 1}
     pieceType: 0
     temaColour: 1
-  - position: {x: 0, y: 0}
+    teamColour: 0
+  - position: {x: 2, y: 1}
     pieceType: 0
     temaColour: 1
-  - position: {x: 0, y: 0}
+    teamColour: 0
+  - position: {x: 3, y: 1}
+    pieceType: 0
+    temaColour: 1
+    teamColour: 0
+  - position: {x: 4, y: 1}
+    pieceType: 0
+    temaColour: 1
+    teamColour: 0
+  - position: {x: 5, y: 1}
+    pieceType: 0
+    temaColour: 1
+    teamColour: 0
+  - position: {x: 6, y: 1}
+    pieceType: 0
+    temaColour: 1
+    teamColour: 0
+  - position: {x: 7, y: 1}
+    pieceType: 0
+    temaColour: 1
+    teamColour: 0
+  - position: {x: 0, y: 6}
     pieceType: 0
     temaColour: 0
-  - position: {x: 0, y: 0}
+    teamColour: 0
+  - position: {x: 1, y: 6}
     pieceType: 0
     temaColour: 0
-  - position: {x: 0, y: 0}
+    teamColour: 0
+  - position: {x: 2, y: 6}
     pieceType: 0
     temaColour: 0
-  - position: {x: 0, y: 0}
+    teamColour: 0
+  - position: {x: 3, y: 6}
     pieceType: 0
     temaColour: 0
-  - position: {x: 0, y: 0}
+    teamColour: 0
+  - position: {x: 4, y: 6}
     pieceType: 0
     temaColour: 0
-  - position: {x: 0, y: 0}
+    teamColour: 0
+  - position: {x: 5, y: 6}
     pieceType: 0
     temaColour: 0
-  - position: {x: 0, y: 0}
+    teamColour: 0
+  - position: {x: 6, y: 6}
     pieceType: 0
     temaColour: 0
-  - position: {x: 0, y: 0}
+    teamColour: 0
+  - position: {x: 7, y: 6}
     pieceType: 0
     temaColour: 0
+    teamColour: 0
   - position: {x: 0, y: 0}
-    pieceType: 0
+    pieceType: 4
     temaColour: 0
+    teamColour: 0
   - position: {x: 0, y: 0}
-    pieceType: 0
+    pieceType: 1
     temaColour: 0
+    teamColour: 0
   - position: {x: 0, y: 0}
-    pieceType: 0
+    pieceType: 5
     temaColour: 0
+    teamColour: 0
   - position: {x: 0, y: 0}
-    pieceType: 0
+    pieceType: 3
     temaColour: 0
+    teamColour: 0
   - position: {x: 0, y: 0}
-    pieceType: 0
+    pieceType: 2
     temaColour: 0
+    teamColour: 0
   - position: {x: 0, y: 0}
-    pieceType: 0
+    pieceType: 5
     temaColour: 0
+    teamColour: 0
   - position: {x: 0, y: 0}
-    pieceType: 0
+    pieceType: 1
     temaColour: 0
+    teamColour: 0
   - position: {x: 0, y: 0}
-    pieceType: 0
+    pieceType: 4
     temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
-  - position: {x: 0, y: 0}
-    pieceType: 0
-    temaColour: 0
+    teamColour: 0
