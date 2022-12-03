@@ -8,6 +8,9 @@ public class Board : MonoBehaviour
 {
     GameObject[,] tilesArray;
 
-
+    private void Start()
+    {
+        
+    }
 
 }

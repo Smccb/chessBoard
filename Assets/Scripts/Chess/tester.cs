@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChessGame : MonoBehaviour
+public class tester : MonoBehaviour
 {
     int lengthOfBoard = 8;
 
@@ -23,16 +23,6 @@ public class ChessGame : MonoBehaviour
             }
         }
     }
-
-   void BoardTilesCreated() {
-        for (int i = 0; i < lengthOfBoard; i++)
-        {
-            for (int j = 0; j < lengthOfBoard; j++)
-            {
-                tilesArray[i, j] = Instantiate(boardTiles, new Vector3(i, 1, j), Quaternion.identity);
-            }
-        }
-}
 
     // Update is called once per frame
     void Update()
