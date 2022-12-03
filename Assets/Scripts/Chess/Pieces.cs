@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Pieces : MonoBehaviour
 {
+    TeamColour tColour;
+    PieceType pType;
+    int currentXPos;
+    int currentYPos;
+
+
     // Start is called before the first frame update
     void Start()
     {
