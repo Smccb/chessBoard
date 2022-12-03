@@ -7,12 +7,14 @@ public class chessGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startingLayout();       
+       // startingLayout();       
     }
 
-    void startingLayout() { 
-        
-    }
+   // void startingLayout() {
+     //   Board.generateBoardTiles();
+    //}
+
+
     // Update is called once per frame
     void Update()
     {
