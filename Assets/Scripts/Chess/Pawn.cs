@@ -9,7 +9,7 @@ public class Pawn : Pieces
     // Start is called before the first frame update
     void Start()
     {
-        movedFromStartPos = false;
+       // movedFromStartPos = false;
     }
 
     // Update is called once per frame
