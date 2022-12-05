@@ -7,7 +7,7 @@ public class Pieces : MonoBehaviour
     TeamColour tColour;
     PieceType pType;
     int currentXPos;
-    int currentYPos;
+    int currentZPos;
 
 
     // Start is called before the first frame update

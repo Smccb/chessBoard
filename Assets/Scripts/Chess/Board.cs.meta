@@ -3,7 +3,10 @@ guid: 89b8c3d3f65eb374fa2a4c442932c04f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - boardTiles: {fileID: 1004212655399775992, guid: de33d787a50697047b0a81dfc3a2bac0, type: 3}
+  - darkpawns: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
+  - lightpawns: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
