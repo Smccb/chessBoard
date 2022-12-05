@@ -9,7 +9,16 @@ public class Pieces : MonoBehaviour
     int currentXPos;
     int currentZPos;
 
+    TeamColour getTColour() {
 
+        TeamColour newColour = colour;
+
+        return newColour;
+    }
+    void setTColour()
+    {
+
+    }
     // Start is called before the first frame update
     void Start()
     {

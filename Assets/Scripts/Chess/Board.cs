@@ -33,7 +33,8 @@ public class Board : MonoBehaviour
     GameObject[,] tilesArray = new GameObject[8, 8];
     GameObject[,] whiteArray = new GameObject[2, 8];
     GameObject[,] blackArray = new GameObject[2, 8];
-    
+    private Vector3 targetAngles;
+
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +59,7 @@ public class Board : MonoBehaviour
     }
 
     void setStartPos() {
-        int dz = 7, lz = 0;
+        int dz = 7, lz = 0; targetAngles = transform.eulerAngles + 180f * Vector3.up;
         Instantiate(darkRook, new Vector3(7, 0, dz), Quaternion.identity);
         Instantiate(darkRook, new Vector3(0, 0, dz), Quaternion.identity);
 
