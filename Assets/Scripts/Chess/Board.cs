@@ -6,43 +6,31 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
-    int lengthOfBoard = 8;
+    int lengthOfBoard = 8; //int tileSize = 1;
+    public Material tileHoverMaterial;
 
     public GameObject boardTiles;
-    public GameObject darkpawns;
-    public GameObject lightpawns;
-
-    public GameObject darkknight;
-    public GameObject lightknight;
-
-    public GameObject darkbishop;
-    public GameObject lightbishop;
-
-    public GameObject darkking;
-    public GameObject lightking;
-
-    public GameObject darkQueen;
-    public GameObject lightQueen;
-
-    public GameObject darkRook;
-    public GameObject lightRook;
-
-
-
 
     GameObject[,] tilesArray = new GameObject[8, 8];
-    GameObject[,] whiteArray = new GameObject[2, 8];
-    GameObject[,] blackArray = new GameObject[2, 8];
-    private Vector3 targetAngles;
 
+
+    //for asset type, piece type and colours/materials
+    [SerializeField] private GameObject[] prefabs;
+    [SerializeField] private Material[] teamMaterials;
+
+
+    [SerializeField] private Pieces[,] chessPieces;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
         BoardTilesCreated();
-        setStartPos();
+        SpawnAllPieces();
+        positionAllPiece();
     }
+
+
 
     void BoardTilesCreated()
     {
@@ -51,40 +39,76 @@ public class Board : MonoBehaviour
             for (int j = 0; j < lengthOfBoard; j++)
             {
                 tilesArray[i, j] = Instantiate(boardTiles, new Vector3(i, (float)0.01, j), Quaternion.identity);
-                
+
             }
-            Instantiate(darkpawns, new Vector3(i, 0, 6), Quaternion.identity);
-            Instantiate(lightpawns, new Vector3(i, 0, 1), Quaternion.identity);
         }
     }
 
-    void setStartPos() {
-        int dz = 7, lz = 0; targetAngles = transform.eulerAngles + 180f * Vector3.up;
-        Instantiate(darkRook, new Vector3(7, 0, dz), Quaternion.identity);
-        Instantiate(darkRook, new Vector3(0, 0, dz), Quaternion.identity);
+    private void SpawnAllPieces(){
+        chessPieces = new Pieces[lengthOfBoard, lengthOfBoard];
 
-        Instantiate(darkknight, new Vector3(1, 0, dz), Quaternion.identity);
-        Instantiate(darkknight, new Vector3(6, 0, dz), Quaternion.identity);
+        int whiteTeam = 1, blackTeam = 0;
 
-        Instantiate(darkking, new Vector3(4, 0, dz), Quaternion.identity);
-        Instantiate(darkQueen, new Vector3(3, 0, dz), Quaternion.identity);
+        //white team
+        chessPieces[0, 0] = SpawnOnePiece(PieceType.Rook, whiteTeam);
+        chessPieces[1, 0] = SpawnOnePiece(PieceType.Knight, whiteTeam);
+        chessPieces[2, 0] = SpawnOnePiece(PieceType.Bishop, whiteTeam);
+        chessPieces[3, 0] = SpawnOnePiece(PieceType.Queen, whiteTeam);
+        chessPieces[4, 0] = SpawnOnePiece(PieceType.King, whiteTeam);
+        chessPieces[5, 0] = SpawnOnePiece(PieceType.Bishop, whiteTeam);
+        chessPieces[6, 0] = SpawnOnePiece(PieceType.Knight, whiteTeam);
+        chessPieces[7, 0] = SpawnOnePiece(PieceType.Rook, whiteTeam);
 
-        Instantiate(darkbishop, new Vector3(2, 0, dz), Quaternion.identity);
-        Instantiate(darkbishop, new Vector3(5, 0, dz), Quaternion.identity);
+        //white pawns
+        for (int i = 0; i < lengthOfBoard; i++) {
+            chessPieces[i, 1] = SpawnOnePiece(PieceType.Pawn, whiteTeam);
+        }
 
-        Instantiate(lightRook, new Vector3(0, 0, lz), Quaternion.identity);
-        Instantiate(lightRook, new Vector3(7, 0, lz), Quaternion.identity);
+        //black team
+        chessPieces[0, 7] = SpawnOnePiece(PieceType.Rook, blackTeam);
+        chessPieces[1, 7] = SpawnOnePiece(PieceType.Knight, blackTeam);
+        chessPieces[2, 7] = SpawnOnePiece(PieceType.Bishop, blackTeam);
+        chessPieces[3, 7] = SpawnOnePiece(PieceType.Queen, blackTeam);
+        chessPieces[4, 7] = SpawnOnePiece(PieceType.King, blackTeam);
+        chessPieces[5, 7] = SpawnOnePiece(PieceType.Bishop, blackTeam);
+        chessPieces[6, 7] = SpawnOnePiece(PieceType.Knight, blackTeam);
+        chessPieces[7, 7] = SpawnOnePiece(PieceType.Rook, blackTeam);
 
-        Instantiate(lightknight, new Vector3(1, 0, lz), Quaternion.identity);
-        Instantiate(lightknight, new Vector3(6, 0, lz), Quaternion.identity);
+        for (int i = 0; i < lengthOfBoard; i++)
+        {
+            chessPieces[i, 6] = SpawnOnePiece(PieceType.Pawn, blackTeam);
+        }
+    }
+    private Pieces SpawnOnePiece(PieceType ptype, int team) {
+        Pieces p = Instantiate(prefabs[(int)ptype-1], transform).GetComponent<Pieces>();
 
-        Instantiate(lightking, new Vector3(4, 0, lz), Quaternion.identity);
-        Instantiate(lightQueen, new Vector3(3, 0, lz), Quaternion.identity);
+        p.ptype = ptype;
+        p.team = team;
+        p.GetComponent<MeshRenderer>().material = teamMaterials[team];
 
-        Instantiate(lightbishop, new Vector3(5, 0, lz), Quaternion.identity);
-        Instantiate(lightbishop, new Vector3(2, 0, lz), Quaternion.identity);
+        return p;
     }
 
+
+    void positionAllPiece() {
+        for (int i = 0; i < lengthOfBoard; i++) {
+            for (int j=0; j < lengthOfBoard;  j++) {
+                if (chessPieces[i, j] != null) {
+                    positionSinglePiece(i, j, true);
+                }
+            }
+        }
+    }
+
+    void positionSinglePiece(int i, int j, bool force = false)
+    {
+        chessPieces[i, j].currentXPos = i;
+        chessPieces[i, j].currentZPos = j;
+        if (chessPieces[i, j].team == 0) {
+           chessPieces[i, j].transform.Rotate(0, 180, 0);
+        } 
+        chessPieces[i, j].transform.position = new Vector3(i, 0, j);
+    }
     // Update is called once per frame
     void Update()
     {

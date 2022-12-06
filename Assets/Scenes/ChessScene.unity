@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4363527306552524, guid: 5b856ec4f8f8cb84f861f8f8a026c288, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4363527306552524, guid: 5b856ec4f8f8cb84f861f8f8a026c288, type: 3}
       propertyPath: m_LocalScale.x
@@ -194,6 +194,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23738020000439864, guid: 5b856ec4f8f8cb84f861f8f8a026c288, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9728b39f56ce29244a90a8c691493fef, type: 2}
+    - target: {fileID: 23738020000439864, guid: 5b856ec4f8f8cb84f861f8f8a026c288, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0666f6aeb0fdbe041a580832a968b1d0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b856ec4f8f8cb84f861f8f8a026c288, type: 3}
 --- !u!4 &537762829 stripped
@@ -294,7 +302,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -421,19 +429,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b8c3d3f65eb374fa2a4c442932c04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tileHoverMaterial: {fileID: 2100000, guid: 5db60ad1fde1bce44a87a4fc0a6c3cab, type: 2}
   boardTiles: {fileID: 1004212655399775992, guid: de33d787a50697047b0a81dfc3a2bac0, type: 3}
-  darkpawns: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
-  lightpawns: {fileID: 1006356879557798, guid: 391882f14be491c40962add653844907, type: 3}
-  darkknight: {fileID: 1179637952412708, guid: a007978aa14da3945b0f6655f65cc278, type: 3}
-  lightknight: {fileID: 1992623236052302, guid: 85ad2c556fdbd5747ac7f5f67f10e59b, type: 3}
-  darkbishop: {fileID: 1672242659374470, guid: f005021ceced8b240983e71a3d481180, type: 3}
-  lightbishop: {fileID: 1028868664329696, guid: 1c0f2faf14460a5478057fd4e0575576, type: 3}
-  darkking: {fileID: 1810274083847610, guid: 309659d4eb727d74d91c4875a85edc00, type: 3}
-  lightking: {fileID: 1389686872840900, guid: 27d2608cb94ae2d44811af52793c3562, type: 3}
-  darkQueen: {fileID: 1471985601831630, guid: 664a4dc6e997f5f47a9233db911328ac, type: 3}
-  lightQueen: {fileID: 1945632463053948, guid: be3573ba2ba53ea4f8979e64874c493d, type: 3}
-  darkRook: {fileID: 1211746330687442, guid: a72c2cd1520039b4084a4a33dfeccf7e, type: 3}
-  lightRook: {fileID: 1971375302472462, guid: f1fc282519e5c4a4daaa864f9c3d446f, type: 3}
+  prefabs:
+  - {fileID: 4783304565382695939, guid: bc8c3bb7678196449b4997c7da089d2f, type: 3}
+  - {fileID: 8635304528212239440, guid: 7baa56fbf24d0ba4789aa895e15edbb4, type: 3}
+  - {fileID: 8301512537300522715, guid: 1e3eda3aa7a7e1045aae0eae323074de, type: 3}
+  - {fileID: 7545016909643436103, guid: 22ce617fb0a3a2d41ac84288ebf42882, type: 3}
+  - {fileID: 5358561319547643128, guid: 9b1cad5d86efa8f40b8b62500479b897, type: 3}
+  - {fileID: 5745674015942888685, guid: 2efaafbb9a5086f49a48c8629d87f120, type: 3}
+  - {fileID: 5745674015942888685, guid: 2efaafbb9a5086f49a48c8629d87f120, type: 3}
+  teamMaterials:
+  - {fileID: 2100000, guid: 133a473f5395c75499724c90d53b7a7d, type: 2}
+  - {fileID: 2100000, guid: 0666f6aeb0fdbe041a580832a968b1d0, type: 2}
 --- !u!4 &1795124356
 Transform:
   m_ObjectHideFlags: 0
@@ -441,7 +449,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795124354}
-  m_LocalRotation: {x: -0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.000000021855694, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
