@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1413307503839329907}
   - component: {fileID: 4316542752129948841}
   - component: {fileID: -5449196279438608119}
+  - component: {fileID: 7898514246086713462}
   m_Layer: 0
   m_Name: King
   m_TagString: Untagged
@@ -102,3 +103,16 @@ MonoBehaviour:
   currentZPos: 0
   desiredPos: {x: 0, y: 0, z: 0}
   desiredScale: {x: 0, y: 0, z: 0}
+--- !u!65 &7898514246086713462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5745674015942888685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8763499, y: 1.7193428, z: 0.7589414}
+  m_Center: {x: 0, y: 0.8596714, z: 0}

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7731947262439152922}
   - component: {fileID: 188880068456668690}
   - component: {fileID: 7418981988928020739}
-  - component: {fileID: 5237471456294877254}
   - component: {fileID: -1067841729657442102}
+  - component: {fileID: -4490492113977371402}
   m_Layer: 0
   m_Name: Bishop
   m_TagString: Untagged
@@ -85,24 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5237471456294877254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7545016909643436103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42ecdc5fdf45a5447aa36233d0fcb548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  ptype: 0
-  currentXPos: 0
-  currentZPos: 0
-  desiredPos: {x: 0, y: 0, z: 0}
-  desiredScale: {x: 0, y: 0, z: 0}
 --- !u!114 &-1067841729657442102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,3 +103,16 @@ MonoBehaviour:
   currentZPos: 0
   desiredPos: {x: 0, y: 0, z: 0}
   desiredScale: {x: 0, y: 0, z: 0}
+--- !u!65 &-4490492113977371402
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7545016909643436103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8763499, y: 1.5062299, z: 0.7589414}
+  m_Center: {x: 0, y: 0.75311494, z: 0}
