@@ -123,7 +123,7 @@ public class Board : MonoBehaviour
         if (Physics.Raycast(ray, hit))
         {
             if (hit.transform.name == "MyObjectName") Debug.Log("My object is clicked by mouse");
-        }*/
+        }*
 
     /*if (Input.GetMouseButtonDown(0))
     {
